@@ -38,20 +38,20 @@ public:
 	}
 
 	// Overriding + - * /
-	ComplexNumber operator + (ComplexNumber& z) const {
+	ComplexNumber operator + (const ComplexNumber& z) const {
 		return ComplexNumber(m_real + z.getReal(), m_complex + z.getComplex());
 	}
 
-	ComplexNumber operator - (ComplexNumber& z) const {
+	ComplexNumber operator - (const ComplexNumber& z) const {
 		return ComplexNumber(m_real - z.getReal(), m_complex - z.getComplex());
 	}
 
-	ComplexNumber operator * (ComplexNumber& z) const {
+	ComplexNumber operator * (const ComplexNumber& z) const {
 		return ComplexNumber(m_real * z.getReal() - m_complex * z.getComplex(),
 			m_complex * z.getReal() + m_real * z.getComplex());
 	}
 
-	ComplexNumber operator / (ComplexNumber& z) const {
+	ComplexNumber operator / (const ComplexNumber& z) const {
 		return ComplexNumber((m_real * z.getReal() + m_complex * z.getComplex()) / (pow(z.getReal(), 2) + pow(z.getComplex(), 2)),
 			(m_complex * z.getReal() - m_real * z.getComplex()) / (pow(z.getReal(), 2) + pow(z.getComplex(), 2)));
 	}
