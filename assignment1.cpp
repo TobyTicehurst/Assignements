@@ -1,4 +1,4 @@
-/// Title
+/// Assignment 1
 
 // How it works:
 // getInput() asks the user for input and holds it in a string. It tests for programming errors eg cin.fail()
